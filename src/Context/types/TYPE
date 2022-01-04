@@ -1,0 +1,4 @@
+export const CREAR_F2 = 'CREAR_F2';
+export const OBTENER_F2 = 'OBTENER_F2';
+export const EDITAR_F2 = 'EDITAR_F2';
+export const BORRAR_F2 = 'BORRAR_F2'; 

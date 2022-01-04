@@ -1,0 +1,41 @@
+.bodyNavBar{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    padding: 5px 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(236, 230, 230, 0.425);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.titleSitio{
+    margin-left: 20px;
+}
+
+.contRolAndIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contRolAndIcon .rolUser{
+    margin: 0 15px;
+}
+
+.contRolAndIcon .contIcon{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin: 0 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(104, 101, 101, 0.425);
+}
+
+.contRolAndIcon .contIcon img{
+    width: 100%;
+}
