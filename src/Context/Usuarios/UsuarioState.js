@@ -159,8 +159,6 @@ const UsuarioState = (props) => {
             cargando: state.cargando,
             obtenerUsuarios,
             obtenerUsuario,
-            eliminarUser: eliminar,
-            addUser: add,
             actualizarUser: actualizar,
             autUsuario,
             obtenerPersonal,
