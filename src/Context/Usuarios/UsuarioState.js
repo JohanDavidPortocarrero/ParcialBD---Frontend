@@ -130,38 +130,6 @@ const UsuarioState = (props) => {
         }
     }
 
-    const eliminar = async (id) => {
-        try{
-
-            const res = await axios.delete('https://back-attendance.herokuapp.com/usuarios/'+id);
-            console.log(res.data)
-            dispatch({
-                type: 'BORRAR_USUARIO',
-                payload: id
-            })
-
-        }catch(e){
-            state.error = true;
-            console.log(e)
-        }
-    }
-
-    const add = async (newUsuario) => {
-        try{
-
-            const res = await axios.post('https://back-attendance.herokuapp.com/usuarios/', newUsuario);
-            console.log(res.data)
-            dispatch({
-                type: 'CREAR_USUARIO',
-                payload: []
-            })
-            
-        }catch(e){
-            state.error = true;
-            console.log(e)
-        }
-    }
-
     const actualizar = async (userUpdate) => {
         try{
 
