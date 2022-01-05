@@ -44,7 +44,22 @@ export default class Login extends Component {
         console.log(usuario);
         usuario.obtenerUsuarios();
         console.log(this.state)
-        if( !usuario.usuarioSelect ){
+        for( let i = 0; i < usuario.usuarios.length; i++ ){
+            if( this.state.username === usuario.usuarios[i].identificacion && this.state.password === usuario.usuarios[i].pass ){
+                this.existe = true;
+                this.usuarioIng = usuario.usuarios[i]
+                break;
+            }
+        }
+
+        if(existe) {
+            usuario.autUsuario(usuarioIng.identificacion);
+            alert('Bienvendo Usuarios ' + usuario.usuarioSelect.nombres)
+        }
+        else{
+            alert('Erro no se encontro usuario o contraseña ');
+        }
+        /*if( !usuario.usuarioSelect ){
             for( let i = 0; i < usuario.state.usuarios.length; i++ ){
                 if( this.state.username === usuario.state.usuarios[i].identificacion && this.state.password === usuario.state.usuarios[i].pass ){
                     existe = true;
@@ -55,15 +70,15 @@ export default class Login extends Component {
 
             if(existe) {
                 usuario.autUsuario(usuarioIng.identificacion);
-                this.props.history.push('/home');
+                alert('Bienvendo Usuarios ' + usuario.usuarioSelect.nombres)
             }
             else{
                 alert('Erro no se encontro usuario o contraseña ');
             }
         }
         else{
-            this.props.history.push('/home');
-        }
+            alert('Desbes cerrar secion sr. ' + usuario.usuarioSelect.nombres)
+        }*/
         
         
     }    
